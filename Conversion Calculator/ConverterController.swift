@@ -85,6 +85,7 @@ class ConverterController: UIViewController {
         inputDisplay.text = ""
         outputDisplay.text = ""
         decimal = false
+        positive = true
     }
     
     @IBAction func plusMinus(_ sender: Any) {
