@@ -88,12 +88,12 @@ class ConverterController: UIViewController {
     }
     
     @IBAction func plusMinus(_ sender: Any) {
-        if positive {
+        if positive && inputDisplay.text?.isEmpty == false {
             inputDisplay.text?.insert("-", at: (inputDisplay.text?.startIndex)!)
             let calculated = String(format: "%.2f", calculate(inputDisplay.text, flag))
             outputDisplay.text = "\(calculated)"
             positive = false
-        } else {
+        } else if !positive && inputDisplay.text?.isEmpty == false {
             inputDisplay.text?.remove(at: (inputDisplay.text?.startIndex)!)
             let calculated = String(format: "%.2f", calculate(inputDisplay.text, flag))
             outputDisplay.text = "\(calculated)"
